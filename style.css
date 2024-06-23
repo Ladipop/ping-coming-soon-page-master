@@ -19,6 +19,53 @@
 html {
   width: 100%;
   font-size: 20px;
+  position: relative;
+}
+
+.pop-up {
+  position: fixed;
+  width: 50%;
+  background-color: var(--Gray);
+  height: 10rem;
+  z-index: 4;
+  display: none;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  text-align: center;
+  color: var(--Very-Dark-Blue);
+  font-weight: 500;
+  padding: 1rem;
+  line-height: 1.4;
+}
+.fa-xmark {
+  position: absolute;
+  top: 12%;
+  left: 93%;
+  color: var(--Very-Dark-Blue);
+}
+.fa-xmark:hover {
+  cursor: pointer;
+}
+.overlayed {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(18.2px);
+  -webkit-backdrop-filter: blur(18.2px);
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.visible-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlayed:hover {
+  cursor: pointer;
 }
 
 body {
@@ -157,9 +204,25 @@ footer {
   .img {
     max-width: 500px;
   }
+  .pop-up {
+    width: 60%;
+  }
 }
 
+@media all and (max-width: 800px) {
+  .pop-up {
+    width: 70%;
+  }
+  .fa-xmark {
+    top: 15%;
+    left: 90%;
+  }
+}
 @media all and (max-width: 570px) {
+  .pop-up {
+    width: 80%;
+  }
+
   form,
   .img {
     max-width: 90%;
@@ -184,3 +247,4 @@ footer {
     align-items: center;
   }
 }
+
