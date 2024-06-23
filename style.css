@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+  --White: hsl(0, 0%, 100%);
+  --error: hsl(0, 100%, 50%);
+}
+
+html {
+  width: 100%;
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  margin: 3rem auto;
+  gap: 1.5rem;
+  font-family: "libre franklin";
+}
+.logo {
+  margin-bottom: 1rem;
+}
+.header {
+  display: flex;
+  gap: 0.3rem;
+}
+.header span:first-child {
+  color: var(--Gray);
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+.header span:last-child {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.subscribe {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+
+.email-field {
+  height: 2.5rem;
+  border-radius: 3rem;
+  width: 65%;
+  padding: 0.1rem;
+  padding-left: 1.6rem;
+  border: 1px solid var(--Blue);
+  font-size: 0.7rem;
+}
+
+.email-field:focus {
+  outline: none;
+}
+.email-field::placeholder {
+  color: var(--Blue);
+  opacity: 0.8;
+}
+.btn {
+  width: 30%;
+  border-radius: 3rem;
+  border: none;
+  background-color: var(--Blue);
+  color: var(--White);
+  font-size: 0.6rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 20px hsla(223, 87%, 63%, 0.298);
+}
+
+.btn:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.error-container {
+  color: var(--error);
+  align-self: flex-start;
+  margin-left: 3rem;
+  font-size: 0.6rem;
+}
+.img {
+  width: 100%;
+  max-width: 700px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+.container {
+  border: 0.05px solid var(--Pale-Blue);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.container:hover {
+  background-color: var(--Blue);
+  cursor: pointer;
+}
+
+.container:hover > .fa-brands {
+  color: var(--White);
+}
+.fa-brands {
+  color: var(--Blue);
+  transition: all 0.3s ease-in-out;
+  font-size: 0.6rem;
+}
+
+.notify {
+  font-size: 0.6rem;
+  opacity: 0.45;
+}
+
+@media all and (min-width: 2600px) {
+  html {
+    height: 100%;
+  }
+}
+
+@media all and (max-width: 1050px) {
+  body {
+    width: 100%;
+  }
+  form,
+  .img {
+    max-width: 500px;
+  }
+}
+
+@media all and (max-width: 570px) {
+  form,
+  .img {
+    max-width: 90%;
+  }
+  form {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .btn {
+    height: 2.5rem;
+  }
+  .email-field,
+  .btn {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 365px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
