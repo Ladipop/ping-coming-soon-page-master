@@ -105,7 +105,6 @@ form {
   width: 100%;
   justify-content: center;
   max-width: 700px;
-  margin-bottom: 1.5rem;
 }
 
 .email-field {
@@ -143,7 +142,8 @@ form {
 .error-container {
   color: var(--error);
   align-self: flex-start;
-  margin-left: 3rem;
+  width: 40%;
+  text-align: center;
   font-size: 0.6rem;
 }
 .img {
@@ -190,7 +190,7 @@ footer {
   opacity: 0.45;
 }
 
-@media all and (min-width: 2600px) {
+@media all and (min-width: 1600px) {
   html {
     height: 100%;
   }
@@ -207,6 +207,9 @@ footer {
   .pop-up {
     width: 60%;
   }
+  .error-container {
+    width: 73%;
+  }
 }
 
 @media all and (max-width: 800px) {
@@ -217,10 +220,19 @@ footer {
     top: 15%;
     left: 90%;
   }
+  .error-container {
+    width: 65%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .error-container {
+    width: 55%;
+  }
 }
 @media all and (max-width: 570px) {
   .pop-up {
-    width: 90%;
+    width: 80%;
   }
 
   form,
@@ -237,6 +249,10 @@ footer {
   .email-field,
   .btn {
     width: 100%;
+  }
+  .error-container {
+    width: auto;
+    margin-left: 2rem;
   }
 }
 
